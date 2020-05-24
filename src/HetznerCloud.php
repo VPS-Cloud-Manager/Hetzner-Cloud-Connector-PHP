@@ -2,7 +2,7 @@
 /**
  * Hetzner Cloud Connector PHP SDK.
  *
- * @version     1.1.0
+ * @version     1.0.0
  *
  * @see         https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP
  *
@@ -130,6 +130,8 @@ class HetznerCloud
     /**
      * Get All Servers
      *
+     * @see https://docs.hetzner.cloud/#servers-get-all-servers
+     *
      * @param array|null $query
      *
      * @return void
@@ -143,5 +145,19 @@ class HetznerCloud
         }
 
         return $this->action('GET', $url);
+    }
+
+    /**
+     * Get Server
+     *
+     * @see https://docs.hetzner.cloud/#servers-get-a-server
+     *
+     * @param string $id
+     *
+     * @return void
+     */
+    public function getServer($id)
+    {
+        return $this->action('GET', 'servers/' . $id);
     }
 }

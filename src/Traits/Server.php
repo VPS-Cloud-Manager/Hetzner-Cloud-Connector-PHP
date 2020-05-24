@@ -16,7 +16,7 @@ namespace VCManager\Traits;
 trait Server
 {
     /**
-     * Get All Servers.
+     * Get all Servers.
      *
      * @see https://docs.hetzner.cloud/#servers-get-all-servers
      *
@@ -36,7 +36,7 @@ trait Server
     }
 
     /**
-     * Get Server.
+     * Get a Server.
      *
      * @see https://docs.hetzner.cloud/#servers-get-a-server
      *
@@ -47,5 +47,17 @@ trait Server
     public function getServer($id)
     {
         return $this->action('GET', 'servers/' . $id);
+    }
+
+    /**
+     * Create a Server
+     *
+     * @param array $data
+     *
+     * @return void
+     */
+    public function createServer($data)
+    {
+        return $this->action('POST', 'servers', json_encode($data));
     }
 }

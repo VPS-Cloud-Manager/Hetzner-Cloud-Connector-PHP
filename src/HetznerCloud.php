@@ -13,6 +13,8 @@
 namespace VCManager;
 
 use Exception;
+use VCManager\Traits\Iso;
+use VCManager\Traits\Location;
 use VCManager\Traits\Pricing;
 use VCManager\Traits\Server;
 
@@ -21,8 +23,10 @@ use VCManager\Traits\Server;
  */
 class HetznerCloud
 {
-    use Server;
+    use Iso;
+    use Location;
     use Pricing;
+    use Server;
 
     /**
      * Default Curl Timeout.
@@ -86,12 +90,12 @@ class HetznerCloud
     private function action($type, $url, $form = null)
     {
         // setup url
-        $buildUrl = $this->apiUrl.'/'.$url;
+        $buildUrl = $this->apiUrl . '/' . $url;
 
         // set default header
-        $headers = [];
+        $headers   = [];
         $headers[] = 'Content-Type: application/json';
-        $headers[] = 'Authorization: Bearer '.$this->token;
+        $headers[] = 'Authorization: Bearer ' . $this->token;
 
         // use custom header if not null
         if ($this->customHeader) {

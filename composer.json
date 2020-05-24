@@ -1,0 +1,24 @@
+{
+    "name": "vcmanager/hetzner-cloud-connector-php",
+    "description": "hetzner cloud connector sdk php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "VPS Cloud Manager",
+            "email": "me@juniyadi.id"
+        }
+    ],
+    "homepage": "https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP",
+    "support": {
+        "issues": "https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP/issues",
+        "source": "https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP"
+    },
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "VCManager\\": "src/"
+        }
+    }
+}

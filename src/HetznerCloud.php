@@ -13,11 +13,12 @@
 namespace VCManager;
 
 use Exception;
+use VCManager\Traits\Pricing;
 use VCManager\Traits\Server;
 
 class HetznerCloud
 {
-    use Server;
+    use Server, Pricing;
 
     /**
     * Default Curl Timeout.

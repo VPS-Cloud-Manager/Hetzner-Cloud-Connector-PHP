@@ -1,10 +1,10 @@
 # Hetzner Cloud Connector [SDK PHP] (Unofficial)
 
 [![StyleCI](https://github.styleci.io/repos/266463223/shield?branch=master)]
-[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v)](//packagist.org/packages/phpunit/phpunit)
-[![Total Downloads](https://poser.pugx.org/phpunit/phpunit/downloads)](//packagist.org/packages/phpunit/phpunit)
-[![Latest Unstable Version](https://poser.pugx.org/phpunit/phpunit/v/unstable)](//packagist.org/packages/phpunit/phpunit)
-[![License](https://poser.pugx.org/phpunit/phpunit/license)](//packagist.org/packages/phpunit/phpunit)
+[![Latest Stable Version](https://poser.pugx.org/vcmanager/hetzner-cloud-connector-php/v)](//packagist.org/packages/vcmanager/hetzner-cloud-connector-php)
+[![Total Downloads](https://poser.pugx.org/vcmanager/hetzner-cloud-connector-php/downloads)](//packagist.org/packages/vcmanager/hetzner-cloud-connector-php)
+[![Latest Unstable Version](https://poser.pugx.org/vcmanager/hetzner-cloud-connector-php/v/unstable)](//packagist.org/packages/vcmanager/hetzner-cloud-connector-php)
+[![License](https://poser.pugx.org/vcmanager/hetzner-cloud-connector-php/license)](//packagist.org/packages/vcmanager/hetzner-cloud-connector-php)
 
 This package is only the link between php and hetzner cloud api. We do not change the request form or anything, for a more complete input form, please check the following documentation: https://docs.hetzner.cloud/.
 

@@ -13,20 +13,26 @@
 namespace VCManager;
 
 use Exception;
+use VCManager\Traits\Datacenter;
+use VCManager\Traits\Images;
 use VCManager\Traits\Iso;
 use VCManager\Traits\Location;
 use VCManager\Traits\Pricing;
 use VCManager\Traits\Server;
+use VCManager\Traits\ServerType;
 
 /**
  * Hetzner Cloud Client Class.
  */
 class HetznerCloud
 {
+    use Datacenter;
+    use Images;
     use Iso;
     use Location;
     use Pricing;
     use Server;
+    use ServerType;
 
     /**
      * Default Curl Timeout.

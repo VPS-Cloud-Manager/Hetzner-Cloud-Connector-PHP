@@ -21,15 +21,16 @@ use VCManager\Traits\Server;
  */
 class HetznerCloud
 {
-    use Server, Pricing;
+    use Server;
+    use Pricing;
 
     /**
-    * Default Curl Timeout.
-    *
-    * @var int
-    *
-    * @see https://www.php.net/manual/en/function.curl-setopt
-    */
+     * Default Curl Timeout.
+     *
+     * @var int
+     *
+     * @see https://www.php.net/manual/en/function.curl-setopt
+     */
     protected $timeout;
 
     /**
@@ -85,12 +86,12 @@ class HetznerCloud
     private function action($type, $url, $form = null)
     {
         // setup url
-        $buildUrl = $this->apiUrl . '/' . $url;
+        $buildUrl = $this->apiUrl.'/'.$url;
 
         // set default header
-        $headers   = [];
+        $headers = [];
         $headers[] = 'Content-Type: application/json';
-        $headers[] = 'Authorization: Bearer ' . $this->token;
+        $headers[] = 'Authorization: Bearer '.$this->token;
 
         // use custom header if not null
         if ($this->customHeader) {

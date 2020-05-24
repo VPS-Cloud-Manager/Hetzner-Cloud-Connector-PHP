@@ -16,6 +16,9 @@ use Exception;
 use VCManager\Traits\Pricing;
 use VCManager\Traits\Server;
 
+/**
+ * Hetzner Cloud Client Class.
+ */
 class HetznerCloud
 {
     use Server, Pricing;

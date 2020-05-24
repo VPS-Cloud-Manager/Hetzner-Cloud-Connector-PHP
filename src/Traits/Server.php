@@ -1,7 +1,20 @@
 <?php
+/**
+ * Hetzner Cloud Connector PHP SDK.
+ *
+ * @version     1.0.0
+ *
+ * @see         https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP
+ *
+ * @author      VCManager <me@juniyadi.id>
+ * @copyright   2020 VCManager
+ */
 
 namespace VCManager\Traits;
 
+/**
+ * Hetzner Cloud Server Traits.
+ */
 trait Server
 {
     /**

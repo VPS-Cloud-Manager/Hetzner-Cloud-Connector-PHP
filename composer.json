@@ -18,6 +18,9 @@
     "require": {
         "php": "^7.2"
     },
+    "require-dev": {
+        "jc21/clitable": "^1.2"
+    },
     "autoload": {
         "psr-4": {
             "VCManager\\": "src/"

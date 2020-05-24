@@ -1,5 +1,11 @@
 # Hetzner Cloud Connector [SDK PHP] (Unofficial)
 
+[![StyleCI](https://github.styleci.io/repos/266463223/shield?branch=master)]
+[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/v)](//packagist.org/packages/phpunit/phpunit)
+[![Total Downloads](https://poser.pugx.org/phpunit/phpunit/downloads)](//packagist.org/packages/phpunit/phpunit)
+[![Latest Unstable Version](https://poser.pugx.org/phpunit/phpunit/v/unstable)](//packagist.org/packages/phpunit/phpunit)
+[![License](https://poser.pugx.org/phpunit/phpunit/license)](//packagist.org/packages/phpunit/phpunit)
+
 This package is only the link between php and hetzner cloud api. We do not change the request form or anything, for a more complete input form, please check the following documentation: https://docs.hetzner.cloud/.
 
 ## Minimum Requirment
@@ -9,7 +15,9 @@ This package is only the link between php and hetzner cloud api. We do not chang
 ## Install
 
 ### Composer
-
+```
+composer require vcmanager/hetzner-cloud-connector-php
+```
 
 ### Manual
 
@@ -18,7 +26,7 @@ This package is only the link between php and hetzner cloud api. We do not chang
 3. Done
 
 ## Documentation
-- PHP Class Documentation : 
+- PHP Class Documentation : https://vps-cloud-manager.github.io/Hetzner-Cloud-Connector-PHP/
 
 ### Docs Class Generate
 wget https://phpdoc.org/phpDocumentor.phar

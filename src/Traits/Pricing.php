@@ -18,7 +18,7 @@ namespace VCManager\Traits;
 trait Pricing
 {
     /**
-     * Get All Prices
+     * Get All Prices.
      *
      * @see https://docs.hetzner.cloud/#pricing-get-all-prices
      *
@@ -31,21 +31,21 @@ trait Pricing
         $url = 'pricing';
 
         if (is_array($query)) {
-            $url = 'pricing?' . http_build_query($query);
+            $url = 'pricing?'.http_build_query($query);
         }
 
         return $this->action('GET', $url);
     }
 
     /**
-     * Get All Prices Simple Result
+     * Get All Prices Simple Result.
      *
      * @return void
      */
     public function getAllPriceSimple()
     {
         $getAllPrices = json_decode($this->getAllPrices(), true);
-        $simplePrice  = null;
+        $simplePrice = null;
 
         // looping all prices in server types
         foreach ($getAllPrices['pricing']['server_types'] as $price) {
@@ -54,8 +54,8 @@ trait Pricing
             foreach ($price['prices'] as $priceByDC) {
                 $priceByDatacenter = [
                     'location' => $priceByDC['location'],
-                    'hourly'   => $priceByDC['price_hourly']['net'] . ' ' . $getAllPrices['pricing']['currency'],
-                    'montly'   => $priceByDC['price_monthly']['net'] . ' ' . $getAllPrices['pricing']['currency'],
+                    'hourly'   => $priceByDC['price_hourly']['net'].' '.$getAllPrices['pricing']['currency'],
+                    'montly'   => $priceByDC['price_monthly']['net'].' '.$getAllPrices['pricing']['currency'],
                 ];
             }
 

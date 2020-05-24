@@ -18,7 +18,7 @@ namespace VCManager\Traits;
 trait Server
 {
     /**
-     * Get All Servers
+     * Get All Servers.
      *
      * @see https://docs.hetzner.cloud/#servers-get-all-servers
      *
@@ -31,14 +31,14 @@ trait Server
         $url = 'servers';
 
         if (is_array($query)) {
-            $url = 'servers?' . http_build_query($query);
+            $url = 'servers?'.http_build_query($query);
         }
 
         return $this->action('GET', $url);
     }
 
     /**
-     * Get Server
+     * Get Server.
      *
      * @see https://docs.hetzner.cloud/#servers-get-a-server
      *
@@ -48,6 +48,6 @@ trait Server
      */
     public function getServer($id)
     {
-        return $this->action('GET', 'servers/' . $id);
+        return $this->action('GET', 'servers/'.$id);
     }
 }

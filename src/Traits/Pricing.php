@@ -2,8 +2,6 @@
 /**
  * Hetzner Cloud Connector PHP SDK.
  *
- * @version     1.0.0
- *
  * @see         https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP
  *
  * @author      VCManager <me@juniyadi.id>
@@ -31,7 +29,7 @@ trait Pricing
         $url = 'pricing';
 
         if (is_array($query)) {
-            $url = 'pricing?'.http_build_query($query);
+            $url = 'pricing?' . http_build_query($query);
         }
 
         return $this->action('GET', $url);
@@ -45,7 +43,7 @@ trait Pricing
     public function getAllPriceSimple()
     {
         $getAllPrices = json_decode($this->getAllPrices(), true);
-        $simplePrice = null;
+        $simplePrice  = null;
 
         // looping all prices in server types
         foreach ($getAllPrices['pricing']['server_types'] as $price) {
@@ -54,8 +52,8 @@ trait Pricing
             foreach ($price['prices'] as $priceByDC) {
                 $priceByDatacenter = [
                     'location' => $priceByDC['location'],
-                    'hourly'   => $priceByDC['price_hourly']['net'].' '.$getAllPrices['pricing']['currency'],
-                    'montly'   => $priceByDC['price_monthly']['net'].' '.$getAllPrices['pricing']['currency'],
+                    'hourly'   => $priceByDC['price_hourly']['net'] . ' ' . $getAllPrices['pricing']['currency'],
+                    'montly'   => $priceByDC['price_monthly']['net'] . ' ' . $getAllPrices['pricing']['currency'],
                 ];
             }
 

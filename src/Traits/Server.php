@@ -2,8 +2,6 @@
 /**
  * Hetzner Cloud Connector PHP SDK.
  *
- * @version     1.0.0
- *
  * @see         https://github.com/VPS-Cloud-Manager/Hetzner-Cloud-Connector-PHP
  *
  * @author      VCManager <me@juniyadi.id>
@@ -31,7 +29,7 @@ trait Server
         $url = 'servers';
 
         if (is_array($query)) {
-            $url = 'servers?'.http_build_query($query);
+            $url = 'servers?' . http_build_query($query);
         }
 
         return $this->action('GET', $url);
@@ -48,6 +46,6 @@ trait Server
      */
     public function getServer($id)
     {
-        return $this->action('GET', 'servers/'.$id);
+        return $this->action('GET', 'servers/' . $id);
     }
 }
